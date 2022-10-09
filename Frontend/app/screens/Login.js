@@ -4,12 +4,24 @@ import { StyleSheet, Text, ImageBackground, View, TextInput, TouchableWithoutFee
 
 
 function Login({navigation}) {
+
+  const [users, setUsers] = useState([
+    {username: 'JohnDoe', password: 'agoodpassword', key: '1'},
+    {username: 'iGEMRocks', password: 'agoodpassword', key: '2'},
+  ]);
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const loginHandler = () => {
-    navigation.goBack();
+  function loginHandler() {
+    if (email == "JohnDoe" && password == "agoodpassword") {
+      navigation.navigate('Home', users[0]);
+    }
+    else if (email == "iGEMRocks" && password == "agoodpassword") {
+      navigation.navigate('Home', users[1])
+    }
   }
+
   const registerHandler = () => {
     navigation.navigate('Register');
   }

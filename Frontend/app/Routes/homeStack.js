@@ -3,6 +3,7 @@ import { createAppContainer } from "react-navigation";
 import WelcomeScreen from "../screens/WelcomeScreen";
 import Login from "../screens/Login";
 import Signup from "../screens/SignupScreen"
+import Home from "../screens/HomeScreen"
 
 const screens = {
   Welcome: {
@@ -22,6 +23,12 @@ const screens = {
     navigationOptions: {
       headerShown: null
   }
+  },
+  Home: {
+    screen: Home,
+    navigationOptions: {
+      headerShown: null
+    }
   }
 }
 
