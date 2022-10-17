@@ -8,7 +8,9 @@ function Signup({navigation}) {
   const [password, setPassword] = useState('');
 
   const loginHandler = () => {
-    navigation.goBack()
+    if (name != '' && email != '' && password != '') {
+      navigation.navigate('Home', {username: name, email: email})
+    }
   }
   return (
     <View style={styles.container}>
@@ -23,7 +25,7 @@ function Signup({navigation}) {
               <TextInput
               style = {styles.inputUser}
               onChangeText={(email) => setEmail(email)}
-              placeholder={"Username"}
+              placeholder={"Email"}
               placeholderTextColor="#a9a9a9"
             />
             <TextInput

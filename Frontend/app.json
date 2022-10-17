@@ -2,6 +2,7 @@
   "expo": {
     "name": "MicroMuralsApp",
     "slug": "MicroMuralsApp",
+    "description": "This is the MicroMurals app for Cornell iGEM",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/icon.png",
