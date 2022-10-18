@@ -5,20 +5,18 @@ import { StyleSheet, Text, ImageBackground, View, TextInput, TouchableWithoutFee
 
 function Login({navigation}) {
 
-  const [users, setUsers] = useState([
-    {username: 'JohnDoe', password: 'agoodpassword', key: '1'},
-    {username: 'iGEMRocks', password: 'agoodpassword', key: '2'},
-  ]);
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   function loginHandler() {
     if (email == "JohnDoe" && password == "agoodpassword") {
-      navigation.navigate('Home', users[0]);
+      navigation.navigate('Home', {username: 'JohnDoe', email: 'JohnDoe@gmail.com'});
     }
     else if (email == "iGEMRocks" && password == "agoodpassword") {
-      navigation.navigate('Home', users[1])
+      navigation.navigate('Home', {username: 'iGEMRocks', email: 'iGEMRocks@gmail.com'})
+    }
+    else if (navigation.getParam('username') != null && email == navigation.getParam('username') && password == navigation.getParam('password')) {
+      navigation.navigate('Home', {username: navigation.getParam('username'), email: navigation.getParam('email')})
     }
   }
 

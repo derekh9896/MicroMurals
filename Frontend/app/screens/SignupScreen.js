@@ -9,7 +9,7 @@ function Signup({navigation}) {
 
   const loginHandler = () => {
     if (name != '' && email != '' && password != '') {
-      navigation.navigate('Home', {username: name, email: email})
+      navigation.navigate('Login', {username: name, email: email, password: password})
     }
   }
   return (
@@ -19,7 +19,7 @@ function Signup({navigation}) {
             <TextInput
               style = {styles.inputName}
               onChangeText={(name) => setName(name)}
-              placeholder={"Name"}
+              placeholder={"Username"}
               placeholderTextColor="#a9a9a9"
             />
               <TextInput
@@ -65,24 +65,24 @@ const styles = StyleSheet.create({
     left: '-27%',
     top: '42%',
     fontSize: 30,
-    width: 190,
-    maxWidth: 190,
+    width: 225,
+    maxWidth: 225,
   },
   inputUser: {
       position: 'absolute',
       left: '-27%',
       top: '51.8%',
       fontSize: 30,
-      width: 190,
-      maxWidth: 190,
+      width: 225,
+      maxWidth: 225,
   },
   inputPass: {
     position: 'absolute',
     left: '-27%',
     top: '61.4%',
     fontSize: 30,
-    width: 190,
-    maxWidth: 190,
+    width: 225,
+    maxWidth: 225,
 },
   signupButton: {
     position: 'absolute',
