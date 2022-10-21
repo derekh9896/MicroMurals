@@ -9,8 +9,8 @@ function Login({navigation}) {
   const [password, setPassword] = useState('');
 
   function loginHandler() {
-    if (email == "JohnDoe" && password == "agoodpassword") {
-      navigation.navigate('Home', {username: 'JohnDoe', email: 'JohnDoe@gmail.com'});
+    if (email == "CornelliGEM" && password == "password") {
+      navigation.navigate('Home', {username: 'CornelliGEM', email: 'JohnDoe@gmail.com'});
     }
     else if (email == "iGEMRocks" && password == "agoodpassword") {
       navigation.navigate('Home', {username: 'iGEMRocks', email: 'iGEMRocks@gmail.com'})

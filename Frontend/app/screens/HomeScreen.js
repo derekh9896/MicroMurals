@@ -19,7 +19,7 @@ function HomeScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <ImageBackground source={require('../assets/HomeScreen.png')} resizeMode="cover" style={styles.image}>
+      <ImageBackground source={require('../assets/HomeScreen2.png')} resizeMode="cover" style={styles.image}>
         <View style={styles.profileContainer}>
           <Text style={styles.usernameStyle}>{ navigation.getParam('username') }</Text>
         </View>
@@ -55,11 +55,14 @@ const styles = StyleSheet.create({
   profileContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: '60%'
+    marginBottom: '60%',
+    flex: 1,
   },
   usernameStyle: {
     fontSize: 30,
-    fontWeight: '600'
+    fontWeight: '600',
+    position: 'absolute',
+    top: '54%'
   },
   myDesignsButton: {
     position: 'absolute',
